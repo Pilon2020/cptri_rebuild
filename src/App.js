@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import Calendar from './pages/calendar.jsx';
 import HeaderBar from './components/HeaderBar.js';
 import About from './pages/about.jsx';
+import Officers from './pages/officers.jsx';
+import Join from './pages/join.jsx';
+import Races from './pages/races.jsx';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path='/calendar' element={<Calendar />}/>
+            <Route path='/join' element={<Join />}/>
+            <Route path='/officers' element={<Officers />} />
+            <Route path='/races' element={<Races />} />
           </Routes>
         </main>
       </div>

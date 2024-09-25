@@ -1,16 +1,19 @@
+:root {
+  --app-header-bg: #212529; /* Define your App-header background color */
+}
+
 .App {
   text-align: center;
   background-color: #c9c9c9;
 }
 
 .App-header {
-  background-color: #212529;
+  background-color: var(--app-header-bg);
   min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: rgb(255, 255, 255);
 }
 
@@ -34,109 +37,141 @@
 }
 
 /* Navigation */
-/* Main container */
+* Navbar container */
 .header-bar-container {
-  display: flex;
-  justify-content: flex-start; /* Align the header content to the left */
-  width: 100%;
+  overflow: hidden;
 }
 
+/* Inner container for the navbar */
 .header-bar-inner {
+  font-size: 16px;
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-content: space-between; /* Space between logo and navigation */
+  justify-content: space-between;
 }
 
 /* Logo styling */
-.home-logo {
-  margin-right: 20px; /* Add space between logo and navigation */
-}
-
 .logo-img {
-  display:flex;
-  padding-left:10px;
-  width: 10vw;
-  height: auto;
+  height: 50px; /* Adjust height to fit your design */
+  margin-right: 16px;
 }
 
-/* Navigation */
+/* Navigation links */
 .nav {
   display: flex;
-  gap: 5px; /* Adds spacing between each nav link */
-  align-items: center; /* Ensures all nav items are vertically centered */
+  align-items: center;
 }
 
-/* General tab styles */
-.nav-link,
-.nav-dropdown-link {
-  font-weight: bold;
-  font-size: 1.75vh;
-  text-decoration: none;
+.nav-link {
+  font-size: 16px;
   color: white;
-  padding: 10px 20px;
-  background-color: transparent;
-  cursor: pointer;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
 }
 
-/* Active tab */
-.nav-link-active {
-  background-color: rgba(116, 116, 116, 0.2);
+.nav-link:hover, 
+.nav-dropdown:hover .dropbtn{
+  background-color: goldenrod;
 }
 
-/* Dropdown styles */
-.nav-dropdown {
+/* Dropdown container */
+.dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: inline-block; /* Inline-block to allow hovering */
 }
 
-.nav-dropdown-menu {
+.dropbtn {
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown:hover{
+  background-color: goldenrod;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none; /* Hide by default */
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(116, 116, 116, 0.9);
-  padding: 10px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  display: none;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu {
-  display: block;
+  margin-top: 8px;
+  right: 0;
+  border-radius: 0px 6px 6px 6px;
+  white-space: nowrap;
 }
 
 .nav-dropdown-item {
-  display: block;
+  display: block; /* Display dropdown items as block */
+  padding: 10px; /* Padding for items */
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+}
+
+.dropdown-content a {
+  float: none;
   color: white;
-  padding: 5px 20px;
+  padding: 12px 16px;
   text-decoration: none;
-  background-color: transparent;
-  white-space: nowrap;
+  display: flex;
+  text-align: left;
+  font-size: 16px;
 }
 
-.nav-dropdown-item:hover {
-  background-color: rgba(116, 116, 116, 0.6);
-  border-radius: 3px;
+.dropdown-content a:hover {
+  color: white;
+  background-color: goldenrod;
+  display: flex;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-/* Add to your CSS file or style section */
-.event {
-  transition: transform 0.2s;
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  background-color: var(--app-header-bg);
+  display: block;
+ 
 }
 
-.event:hover {
-  transform: scale(1.02);
+officers-container {
+  text-align: center; /* Center the title */
 }
 
-.modal {
-  display: none; /* Initially hidden */
-}
-
-.modal-content {
-  border-radius: 8px;
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Space between items */
+  margin: 20px auto; /* Center the row and add margin */
   padding: 20px;
+  width: 80vw;
+}
+
+.column {
+  flex: 1 1 30%; /* Allow up to 3 columns with some spacing */
+  max-width: 30vw; /* Prevent columns from exceeding this width */
+  margin: 10px; /* Space between columns */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.card {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 15px; /* Inner padding */
+  text-align: center; /* Center text in card */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-height: 300px;
+}
+
+.card img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
 }

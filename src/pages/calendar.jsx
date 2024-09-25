@@ -79,7 +79,7 @@ const Calendar = () => {
     const today = new Date().toLocaleDateString();
 
     return (
-        <div style={{ height: '95vh', padding: '20px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+        <div style={{ height: '90vh', padding: '20px', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
             <h1>Calendar</h1>
             <div className="calendar-container" style={{ display: 'flex', flexDirection: 'row', overflowX: 'auto', gap: '10px', justifyContent: 'center', width: '90vw' }}>
                 {weekDates.map((date) => {
