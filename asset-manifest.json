@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cptri_rebuild/static/css/main.4e1ddc8c.css",
+    "main.js": "/cptri_rebuild/static/js/main.d57d3f11.js",
+    "static/js/453.525338df.chunk.js": "/cptri_rebuild/static/js/453.525338df.chunk.js",
+    "static/media/CP_team_logo.png": "/cptri_rebuild/static/media/CP_team_logo.cfa86c281f452133ada3.png",
+    "index.html": "/cptri_rebuild/index.html",
+    "main.4e1ddc8c.css.map": "/cptri_rebuild/static/css/main.4e1ddc8c.css.map",
+    "main.d57d3f11.js.map": "/cptri_rebuild/static/js/main.d57d3f11.js.map",
+    "453.525338df.chunk.js.map": "/cptri_rebuild/static/js/453.525338df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e1ddc8c.css",
+    "static/js/main.d57d3f11.js"
+  ]
+}
