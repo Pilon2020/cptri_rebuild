@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div style={{height:'90vh', flexDirection: 'column', gap: '10px' }}>
+    <div className="content">
         <h1>
           Cal Poly Triathlon Rebuild
         </h1>

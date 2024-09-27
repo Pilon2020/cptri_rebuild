@@ -17,8 +17,16 @@
   color: rgb(255, 255, 255);
 }
 
+.Footer {
+  justify-content: flex-end;
+}
+
 .App-link {
   color: #f0e221;
+}
+
+.Content {
+  height: 100%;
 }
 
 
@@ -159,6 +167,18 @@ officers-container {
   max-width: 30vw; /* Prevent columns from exceeding this width */
   margin: 10px; /* Space between columns */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.Footer .column {
+  flex: 1 1 15%
+}
+
+.Footer .row{
+  justify-content: center;
+}
+
+.Footer .sponsors{
+  display: block;
 }
 
 .card {

@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Calendar from './pages/calendar.jsx';
 import { HeaderBar, RaceHeader } from './components/HeaderBar.js';
+import FooterBar from './components/FooterBar.js'
 import About from './pages/about.jsx';
 import Officers from './pages/officers.jsx';
 import Join from './pages/join.jsx';
@@ -50,6 +51,9 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <footer>
+        <FooterBar />
+      </footer>
     </div>
   );
 }
