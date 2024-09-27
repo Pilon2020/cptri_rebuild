@@ -9,6 +9,10 @@ import Officers from './pages/officers.jsx';
 import Join from './pages/join.jsx';
 import Races from './pages/races.jsx';
 import raceInfo from './components/raceInfo'; 
+import RaceCourse from './pages/course.jsx'; // Import the new RaceCourse component
+import RaceInfo from './pages/info.jsx';
+import Results from './pages/results.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   const location = useLocation();
@@ -31,9 +35,19 @@ export default function App() {
           <Route path="/join" element={<Join />} />
           <Route path="/officers" element={<Officers />} />
           <Route path="/races" element={<Races />} />
+
+          {/* Generate routes for each race */}
           {Object.entries(raceInfo).map(([key, { component: RaceComponent }]) => (
-          <Route key={key} path={`/races/${key}`} element={<RaceComponent />} />
-        ))}
+            <React.Fragment key={key}>
+              <Route path={`/races/${key}`} element={<RaceComponent />} />
+              <Route path={`/races/${key}/course`} element={<RaceCourse />} /> {/* Use RaceCourse for course */}
+              <Route path={`/races/${key}/info`} element={<RaceInfo />} />
+              <Route path={`/races/${key}/:raceYear`} element={<Results />} />
+              <Route path={`/races/${key}/404`} element={<NotFound />} />
+            </React.Fragment>
+          ))}
+
+        <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>

@@ -27,13 +27,16 @@
   display: flex;
   justify-content: flex-end; /* Center-align the header content */
   width: 100%;
+  height: 5vh;
 }
 
 .header-bar-inner {
+  font-size: 16px;
   display: flex;
-  justify-content: flex-end; /* Ensure items in the header are spaced evenly */
+  justify-content: space-between; /* Ensure items in the header are spaced evenly */
   align-items: center;
   width: 100%;
+  padding:0.5vh 1vw 0.5vh;
 }
 
 /* Navigation */
@@ -42,18 +45,12 @@
   overflow: hidden;
 }
 
-/* Inner container for the navbar */
-.header-bar-inner {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /* Logo styling */
 .logo-img {
+  margin-top: 6px;
   height: 50px; /* Adjust height to fit your design */
   margin-right: 16px;
+  padding-left: 1vw;
 }
 
 /* Navigation links */
@@ -73,12 +70,14 @@
 .nav-link:hover, 
 .nav-dropdown:hover .dropbtn{
   background-color: goldenrod;
+  border-radius: 6px;
 }
 
 /* Dropdown container */
 .dropdown {
   position: relative;
   display: inline-block; /* Inline-block to allow hovering */
+  border-radius: 6px;
 }
 
 .dropbtn {
@@ -89,10 +88,12 @@
   border: none;
   cursor: pointer;
   outline: none;
+  border-radius: 6px;
 }
 
 .dropdown:hover{
   background-color: goldenrod;
+  border-radius: 6px;
 }
 
 /* Dropdown content */
@@ -174,4 +175,420 @@ officers-container {
   max-width: 100%; /* Ensure images are responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 5px; /* Rounded corners for images */
+}
+
+.not-found {
+  height:95vh;
+}
+
+/* MTS Formatting */
+.mts {
+  background-color: #231f20;
+  height: 95vh; 
+  display: flex; 
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.mts h1 {
+  color: White;
+}
+
+.mts p {
+  color: White;
+}
+
+.MarchTriathlonSeries.header-bar-container {
+  background-color: #1eb39c;
+  display: flex;
+  justify-content: flex-end; /* Center-align the header content */
+  width: 100%;
+  height: 5vh;
+}
+
+.MarchTriathlonSeries .header-bar-inner{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:0.5vh 1vw 0.5vh;
+  font-size: 16px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.MarchTriathlonSeries .nav-link:hover, 
+.MarchTriathlonSeries .nav-dropdown:hover .MarchTriathlonSeries .dropbtn{
+background-color: #f68c57;
+}
+
+.MarchTriathlonSeries .dropdown {
+  position: relative;
+  display: inline-block; /* Inline-block to allow hovering */
+}
+
+.MarchTriathlonSeries .dropbtn {
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.MarchTriathlonSeries .dropdown:hover{
+  background-color: #f68c57;
+}
+
+/* Dropdown content */
+.MarchTriathlonSeries .dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 8px;
+  right: 0;
+  border-radius: 0px 6px 6px 6px;
+  white-space: nowrap;
+}
+
+.MarchTriathlonSeries .nav-dropdown-item {
+  display: block; /* Display dropdown items as block */
+  padding: 10px; /* Padding for items */
+}
+
+.MarchTriathlonSeries .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  font-size: 16px;
+}
+
+.MarchTriathlonSeries .dropdown-content a:hover {
+  color: white;
+  background-color: #f68c57;
+  display: flex;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.MarchTriathlonSeries .dropdown:hover .dropdown-content {
+  background-color: #1eb39c;
+  display: block;
+ 
+}
+
+/* Mustang Showdown Formatting */
+.MustangShowdown {
+  background-color: #55821D;
+  height: 95vh; 
+  display: flex; 
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.MustangShowdown h1 {
+  color: #0A021F;
+}
+
+.MustangShowdown p {
+  color: #0A021F;
+}
+
+.Mustang_Showdown.header-bar-container {
+  background-color: #072317;
+  display: flex;
+  justify-content: flex-end; /* Center-align the header content */
+  width: 100%;
+  height: 5vh;
+}
+
+.Mustang_Showdown .header-bar-inner{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:0.5vh 1vw 0.5vh;
+  font-size: 16px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.Mustang_Showdown .nav-link:hover, 
+.Mustang_Showdown .nav-dropdown:hover .Mustang_Showdown .dropbtn{
+background-color: #C8DF68;
+}
+
+.MarchTriathlonSeries .dropdown {
+  position: relative;
+  display: inline-block; /* Inline-block to allow hovering */
+}
+
+.Mustang_Showdown .dropbtn {
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.Mustang_Showdown .dropdown:hover{
+  background-color: #C8DF68;
+}
+
+/* Dropdown content */
+.Mustang_Showdown .dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 8px;
+  right: 0;
+  border-radius: 0px 6px 6px 6px;
+  white-space: nowrap;
+}
+
+.Mustang_Showdown .nav-dropdown-item {
+  display: block; /* Display dropdown items as block */
+  padding: 10px; /* Padding for items */
+}
+
+.Mustang_Showdown .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  font-size: 16px;
+}
+
+.Mustang_Showdown .dropdown-content a:hover {
+  color: white;
+  background-color: #C8DF68;
+  display: flex;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.Mustang_Showdown .dropdown:hover .dropdown-content {
+  background-color: #072317;
+  display: block;
+ 
+}
+
+/* TourdeDonut Formatting */
+.tdd {
+  background-color: #ffd1ff;
+  height: 95vh; 
+  display: flex; 
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.tdd h1 {
+  color: #0A021F;
+}
+
+.tdd p {
+  color: #0A021F;
+}
+
+.TourDeDonut.header-bar-container {
+  background-color: #7833BC;
+  display: flex;
+  justify-content: flex-end; /* Center-align the header content */
+  width: 100%;
+  height: 5vh;
+}
+
+.TourDeDonut .header-bar-inner{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:0.5vh 1vw 0.5vh;
+  font-size: 16px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.TourDeDonut .nav-link:hover, 
+.TourDeDonut .nav-dropdown:hover .TourDeDonut .dropbtn{
+background-color: #FE5FE4;
+}
+
+.TourDeDonut .dropdown {
+  position: relative;
+  display: inline-block; /* Inline-block to allow hovering */
+}
+
+.TourDeDonut .dropbtn {
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.TourDeDonut .dropdown:hover{
+  background-color: #FE5FE4;
+}
+
+/* Dropdown content */
+.TourDeDonut .dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 8px;
+  right: 0;
+  border-radius: 0px 6px 6px 6px;
+  white-space: nowrap;
+}
+
+.TourDeDonut .nav-dropdown-item {
+  display: block; /* Display dropdown items as block */
+  padding: 10px; /* Padding for items */
+}
+
+.TourDeDonut .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  font-size: 16px;
+}
+
+.TourDeDonut .dropdown-content a:hover {
+  color: white;
+  background-color: #FE5FE4;
+  display: flex;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.TourDeDonut .dropdown:hover .dropdown-content {
+  background-color: #7833BC;
+  display: block;
+ 
+}
+
+/* Heart and Soles Formatting */
+.heartsoles {
+  background-color: #ffd1ff;
+  height: 95vh; 
+  display: flex; 
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.heartsoles h1 {
+  color: #0A021F;
+}
+
+.heartsoles p {
+  color: #0A021F;
+}
+
+.HeartandSoles.header-bar-container {
+  background-color: #c20020;
+  display: flex;
+  justify-content: flex-end; /* Center-align the header content */
+  width: 100%;
+  height: 5vh;
+}
+
+.HeartandSoles .header-bar-inner{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:0.5vh 1vw 0.5vh;
+  font-size: 16px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.HeartandSoles .nav-link:hover, 
+.HeartandSoles .nav-dropdown:hover .HeartandSoles .dropbtn{
+background-color: #FE5FE4;
+}
+
+.HeartandSoles .dropdown {
+  position: relative;
+  display: inline-block; /* Inline-block to allow hovering */
+}
+
+.HeartandSoles .dropbtn {
+  font-size: 16px;
+  color: white;
+  background-color: inherit;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.HeartandSoles .dropdown:hover{
+  background-color: #FE5FE4;
+}
+
+/* Dropdown content */
+.HeartandSoles .dropdown-content {
+  display: none; /* Hide by default */
+  position: absolute;
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 8px;
+  right: 0;
+  border-radius: 0px 6px 6px 6px;
+  white-space: nowrap;
+}
+
+.HeartandSoles .nav-dropdown-item {
+  display: block; /* Display dropdown items as block */
+  padding: 10px; /* Padding for items */
+}
+
+.HeartandSoles .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  font-size: 16px;
+}
+
+.HeartandSoles .dropdown-content a:hover {
+  color: white;
+  background-color: #FE5FE4;
+  display: flex;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.HeartandSoles .dropdown:hover .dropdown-content {
+  background-color: #c20020;
+  display: block;
+ 
 }

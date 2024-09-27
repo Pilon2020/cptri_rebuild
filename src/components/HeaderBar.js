@@ -20,8 +20,8 @@ export function HeaderBar() {
   const racesTab = {
     label: "Races",
     dropdownItems: [
-      { label: "Mustang Showdown", to: "/races/Mustang_Showdown" },
       { label: "March Triathlon Series", to: "/races/MarchTriathlonSeries" },
+      { label: "Mustang Showdown", to: "/races/Mustang_Showdown" },
       { label: "Tour De Donut", to: "/races/TourDeDonut" },
       { label: "Heart and Soles", to: "/races/HeartandSoles" },
     ],
@@ -33,6 +33,8 @@ export function HeaderBar() {
       setValue(currentIndex);
     }
   }, [currentPath]); // eslint-disable-line react-hooks/exhaustive-deps
+
+
 
   return (
     <div className="header-bar-container">
@@ -105,7 +107,7 @@ export function RaceHeader() {
     { label: raceData.title || "Race", to: `/races/${raceKey}` },
     { label: "Course", to: `/races/${raceKey}/course` },
     { label: "Info", to: `/races/${raceKey}/info` },
-    { label: "Register", href: raceData.registerLink || "#" }, // External link for Register
+    { label: "Register", to: raceData.registerLink || `/races/${raceKey}/404` }, // Changed href to to
   ];
 
   const racesTab = {
@@ -120,21 +122,24 @@ export function RaceHeader() {
     }
   }, [currentPath]);
 
+  const headerClass = raceKey ? `${raceKey}` : "";
+
   return (
-    <div className="header-bar-container">
+    <div className={`header-bar-container ${headerClass}`}>
       <div className="header-bar-inner">
         <Link to="/" className="home-logo">
           <img src={logo} alt="Home" className="logo-img" />
         </Link>
         <nav className="nav">
           {tabList.map((tab, index) =>
-            tab.href ? (
+            tab.to === raceData.registerLink ? ( // Check if it's the register link
               <a
                 key={index}
-                href={tab.href}
+                href={tab.to}
                 className={`nav-link ${value === index ? "nav-link-active" : ""}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" // Open in new tab
+                rel="noopener noreferrer" // Security measure
+                onClick={() => setValue(index)} // Ensure the active state is set
               >
                 {tab.label}
               </a>
